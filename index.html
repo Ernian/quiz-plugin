@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(74, 33, 221);
+    }
+
+    #main{
+      position: relative;
+    }
+
+    .modal {
+      position: absolute;
+      top: 2%;
+      left: 50%;
+      transform: translatex(-50%);
+      z-index: 10;
+      width: 550px;
+      border: 4px solid rgb(78, 6, 6);
+      background-color: #fff;
+      border-radius: 2rem;
+      padding: 30px;
+    }
+
+    .modal-btn {
+      position: fixed;
+      top: 1rem;
+      right: 2rem;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      font-family: arial;
+      font-size: 50px;
+      font-weight: bold;
+      color: white;
+      background-color: black;
+      text-align: center;
+      line-height: 70px;
+      cursor: pointer;
+    }
+
+    .quiz {
+      width: 500px;
+      margin: 30px auto;
+      background-color: #fff;
+      border-radius: 2rem;
+      padding: 30px;
+    }
+
+    .quiz-questions-item__answer,
+    .quiz-results-item__answer {
+      list-style: none;
+    }
+
+    .quiz-indicator {
+      margin: 30px 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .invalid {
+      color: red;
+    }
+
+    .valid {
+      color: green;
+      font-size: 1.1rem;
+    }
+  </style>
+
+</head>
+
+<body>
+  <main id="main">
+    <div id="quiz-container">
+      <div id="quiz" class="quiz"></div>
+      <div id="quiz-2" class="quiz"></div>
+    </div>
+    <div id="quiz-constructor" class="modal"></div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="Quiz.js"></script>
+  <script src="QuizConstructor.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
